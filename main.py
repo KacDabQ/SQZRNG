@@ -1,5 +1,4 @@
 import random, time, keyboard
-from other.colors import prRed, prBlack, prCyan, prGreen, prLightGray, prLightPurple, prPurple, prYellow
 
 if __name__ == "__main__":
     class RNG:
@@ -168,18 +167,6 @@ if __name__ == "__main__":
         for i in list(inputDict.keys()):
             outputList.append(i)
         return outputList
-    
-    '''def SQZsRNGAppropriateColor(resultNumber):
-        if resultNumber <= 100:
-            print(SQZsRNG.itemsName[resultNumber])
-        elif resultNumber <= 140:
-            prGreen(SQZsRNG.itemsName[resultNumber])
-        elif resultNumber <= 155:
-            prCyan(SQZsRNG.itemsName[resultNumber])
-        elif resultNumber <= 160:
-            prPurple(SQZsRNG.itemsName[resultNumber])
-        elif resultNumber <= 161:
-            prYellow(SQZsRNG.itemsName[resultNumber])'''
 
     SQZsRNG.itemsProbability = itemsProbabilityMaker(SQZsRNG.items, SQZsRNG.itemsProbability, SQZsRNG.probabilitySum)
     SQZsRNG.itemsName = itemsNameMaker(SQZsRNG.items, SQZsRNG.itemsName)

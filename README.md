@@ -5,6 +5,20 @@
 
 # CHANGELOG
 
+## v0.1.1
+
+Added:
+
+- Installer
+
+Changed/Fixed:
+
+- Nothing
+
+Removed:
+
+- Nothing
+
 ## v0.1
 
 Added:

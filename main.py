@@ -2,11 +2,12 @@ import random, time, keyboard
 
 if __name__ == "__main__":
     class RNG:
-        def __init__(self, items, probabilitySum, itemsProbability, itemsName):
+        def __init__(self, items, probabilitySum, itemsProbability, itemsName, rollsCounter):
             self.items = items
             self.probabilitySum = probabilitySum
             self.itemsProbability = itemsProbability
             self.itemsName = itemsName
+            self.rollsCounter = rollsCounter
 
     SQZsRNG = RNG({
                 'Common - 1 in 2 (50%)': 5000000,
@@ -147,7 +148,7 @@ if __name__ == "__main__":
                 \n\n\n\n''': 1,
                 ####################
                 'nothing': 0
-            }, 0, [], [])
+            }, 0, [], [], 0)
 
     def result(resultNumber, itemsProbability):
         winningIndex = 0
@@ -178,7 +179,7 @@ if __name__ == "__main__":
     while command != 'quit':
         keyboard.read_key()
         if keyboard.is_pressed("space"):
-
+            SQZsRNG.rollsCounter += 1
             # RNG TIME
 
             resultNumber = random.randint(1, SQZsRNG.probabilitySum)
@@ -213,3 +214,6 @@ if __name__ == "__main__":
             
             print('---')
             print(SQZsRNG.itemsName[resultNumber])
+
+        elif keyboard.is_pressed('c'):
+            print('\nYou have rolled', SQZsRNG.rollsCounter, 'times in this session.\n')

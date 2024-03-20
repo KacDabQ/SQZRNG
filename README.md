@@ -3,7 +3,29 @@
 'Space' - Roll
 'C' - Counter
 
+Autoroll (click the number to enable):
+
+- 1 = Stops at 1,000 or more.
+- 2 = Stops at 10,000 or more.
+- 3 = Stops at 100,000 or more.
+- 4 = Stops at 1,000,000 or more.
+- 5 = Autostop wont bother you.
+
 # CHANGELOG
+
+## v0.2
+
+Added:
+
+- Autostop. Tutorial above
+
+Changed/Fixed:
+
+- (SMOOTH: LIKE A BUTTER) is now (GLACIER)
+
+Removed:
+
+- SMOOTH: LIKE A BUTTER mutation
 
 ## v0.1.1
 

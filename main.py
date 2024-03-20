@@ -1,5 +1,7 @@
 import random, time, keyboard
 
+autostop = 1
+
 if __name__ == "__main__":
     class RNG:
         def __init__(self, items, probabilitySum, itemsProbability, itemsName, rollsCounter):
@@ -28,7 +30,7 @@ if __name__ == "__main__":
                 '\n -=PROFANED=- \n 1 IN 5,000 (0,02%) \n': 2000,
                 '\n\n --==(UNDEAD)==-- \n 1 IN 10,000 (0,01%) \n\n': 1000,
                 '\n\n --==(PLATINUM)==-- \n 1 IN 10,000 (0,01%) \n\n': 1000,
-                '\n\n --==(SMOOTH: LIKE A BUTTER)==-- \n 1 IN 10,000 (0,01%) \n\n': 1000,
+                '\n\n --==(GLACIER)==-- \n 1 IN 10,000 (0,01%) \n\n': 1000,
                 '\n\n --==(SIDEREUM)==-- \n 1 IN 10,000 (0,01%) \n\n': 1000,
                 '\n\n --==(EPILEPTIC)==-- \n 1 IN 20,000 (0,005%) \n\n': 500,
                 '\n\n --==(UNIQUE)==-- \n 1 IN 20,000 (0,005%) \n\n': 500,
@@ -184,22 +186,22 @@ if __name__ == "__main__":
 
             resultNumber = random.randint(1, SQZsRNG.probabilitySum)
 
-            if resultNumber >= 9950000 and resultNumber < 9993000:
+            if resultNumber >= 9950000 and resultNumber < 9993000 and autostop <= 1:
                 print('...')
                 time.sleep(2)
-            elif resultNumber >= 9993000 and resultNumber < 9999700:
+            elif resultNumber >= 9993000 and resultNumber < 9999700 and autostop <= 2:
                 print('...?')
                 time.sleep(3)
                 print('!!!')
                 time.sleep(1)
-            elif resultNumber >= 9999700 and resultNumber < 9999960:
+            elif resultNumber >= 9999700 and resultNumber < 9999960 and autostop <= 3:
                 print('...?!')
                 time.sleep(3)
                 print('!!!')
                 time.sleep(2)
                 print('&$#!#%@')
                 time.sleep(1)
-            elif resultNumber >= 9999960:
+            elif resultNumber >= 9999960 and autostop <= 4:
                 print('.........')
                 time.sleep(4)
                 print('...?')
@@ -217,3 +219,19 @@ if __name__ == "__main__":
 
         elif keyboard.is_pressed('c'):
             print('\nYou have rolled', SQZsRNG.rollsCounter, 'times in this session.\n')
+
+        elif keyboard.is_pressed('1'):
+            autostop = 1
+            print('\nAutostop will now stop at 1,000 or more.\n')
+        elif keyboard.is_pressed('2'):
+            autostop = 2
+            print('\nAutostop will now stop at 10,000 or more.\n')
+        elif keyboard.is_pressed('3'):
+            autostop = 3
+            print('\nAutostop will now stop at 100,000 or more.\n')
+        elif keyboard.is_pressed('4'):
+            autostop = 4
+            print('\nAutostop will now stop at 1,000,000 or more.\n')
+        elif keyboard.is_pressed('5'):
+            autostop = 5
+            print('\nAutostop will not bother you.\n')

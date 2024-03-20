@@ -1,7 +1,7 @@
 # INFO
 
-'Space' - Roll
-'C' - Counter
+- 'Space' - Roll
+- 'C' - Counter
 
 Autostop (click the number to enable):
 

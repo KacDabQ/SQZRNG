@@ -3,7 +3,7 @@
 'Space' - Roll
 'C' - Counter
 
-Autoroll (click the number to enable):
+Autostop (click the number to enable):
 
 - 1 = Stops at 1,000 or more.
 - 2 = Stops at 10,000 or more.
